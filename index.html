@@ -1,0 +1,564 @@
+  <!DOCTYPE html>
+  <html  lang="en">
+    
+  <head>
+       
+       <link rel="stylesheet"   href="style.css">
+       <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+       <link rel="shortcut icon" href="imagenesImportantes/x.png" />
+    <title>Todo Sobre Tus Practicas Profesionales Conalep</title>
+    <style>
+      body {
+       background-color: #f1f1ef;    
+       
+      
+       /* background: linear-gradient(90deg,  #ecebea, #f1f1ef );*/ /*ESTO ES UN FONDO QUE SE VA DEGRADANDO DE IZQUIERDA A DERECHA */
+
+  
+   
+       margin: 0;
+       padding: 0;
+    }
+/*esto hace que se ajuste a las pantallas moviles , es increible */
+    @media only screen and (max-width: 600px) {
+      
+    html{
+       width: min-content;
+    }
+    }
+    
+     
+      
+      #rectangle {
+        
+    width: 100%; 
+    max-width: 340px;
+    height: auto; 
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    padding: 230px; 
+    box-sizing: border-box; 
+    right: 60px;/*estaba en 8*//*12*/
+    top: 10px;
+        
+}
+
+
+@media (max-width: 768px) {
+    #rectangle {
+        margin-left: 119px;
+    }
+}
+
+      
+      #image-container {
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       will-change: transform;
+       background: white;
+       border-radius: 14px;
+       display: flex;
+       box-shadow: 0 25px 50px -12px hsla(0, 0%, 0%, 0.281);
+       transform-origin: center top;
+        
+      }
+      
+      #image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        display: none;
+      }
+      
+      /*el numero*/
+      #text {
+        position: absolute;
+        top: 65%;
+        left: 19%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 30.42px; 
+        
+      }
+      
+      #prev-arrow,
+      #next-arrow {
+        position: absolute;
+        font-size: 70px; 
+        cursor: pointer;
+      }
+      
+      #prev-arrow {
+        top: 10%;
+        right: 410px; 
+        transform: translateY(-50%);
+        color:#ab0033;
+      will-change: transform;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      box-shadow: 0 25px 50px -12px hsl(0, 100%, 50%);
+      transform-origin: center top;
+        
+       
+      }
+      
+      #next-arrow {
+        top: 80%;
+        right: -11px; 
+        transform: translateY(-50%);
+        color:#ab0033;
+      will-change: transform;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+     
+      box-shadow: 0 25px 50px -12px hsl(0, 100%, 50%);
+      transform-origin: center top;  
+      }
+
+
+      #top-line,
+      #bottom-line {
+        width: 100%;
+        height: 70.2px; 
+        background-color: rgba(180, 62, 62, 0.582);
+        position: fixed;
+        left: 0;
+        text-align: center;
+        line-height: 70.2px; 
+        font-size: 46.62px; 
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+
+      }
+
+      #top-line {
+        top: 0;
+      }
+
+      #bottom-line {
+        bottom: 0;
+      }
+    </style>
+</head>
+   <body>
+   </section>
+     <!DOCTYPE html>
+     <html>
+ <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+              .imagen-logo img {
+                  max-width: 100%;
+                  height: auto;
+              }
+      
+              .logos {
+                  text-align: center;
+              }
+      
+              /* Media  para dispositivos móviles */
+              @media only screen and (max-width: 844px) {
+                  .imagen-logo {
+                      text-align: center;
+                  }
+      
+                  .logos {
+                      font-size: 20px;
+                      margin-left: 30px;
+                      margin-right: 10px;
+                    
+                  }
+              }
+          </style>
+      </head>
+      <body>
+        
+    
+
+          <header>
+              <h1 class="logos">Todo Sobre Tus prácticas Profesionales</h1>
+          </header>
+      </body>
+      </html>
+      
+
+     </header>
+     <header>
+      
+      <div class="sec-center">  
+        <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+        <label class="for-dropdown" for="dropdown">Menú De Archivos<i class="uil uil-arrow-down" ></i></label>
+        <div class="section-dropdown"> 
+          <input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub"/>
+
+            <a href="Archivos/Cedula.docx"> Cédula<i class="uil uil-arrow-right"></i></a>
+            <a href="Archivos/Informe Bimestral.docx">Informe Bimestral <i class="uil uil-arrow-right"></i></a>
+            <a href="Archivos/Informe Final.docx">Informe Final <i class="uil uil-arrow-right"></i></a>
+          </div>
+        
+          
+          </div>
+       
+
+
+      
+      </nav>
+          <script>
+       
+            window.addEventListener('beforeunload', function () {
+              window.scrollTo(0, 0);
+            });
+          </script>
+         
+        
+      
+        <script>
+          const archivoSelect = document.getElementById('archivo-select');
+          archivoSelect.addEventListener('change', function() {
+            const selectedValue = archivoSelect.value;
+            if (selectedValue !== '') {
+              const link = document.createElement('a');
+              link.href = selectedValue;
+              link.download = selectedValue;
+              link.click();
+            }
+          });
+        </script>
+       
+          <label for="check" class="Esconder menu">&#215;</label>
+        </nav>
+      </section>
+    </header>
+   
+    <section id="liston-superior" class="d-none d-sm-none d-md-none d-lg-block">
+         </div>
+        </div>
+      </div>
+    </section>
+    
+   </div>
+
+    <section id="liston-infesuperior" class="d-none d-sm-none d-md-none d-lg-block"></section>
+    
+    <div id="rectangle">
+      <div id="image-container">
+        <img src="imagenesImportantes/IMSS.jpg" alt="Imagen 1">
+        <img src="imagenesImportantes/cedula 1.1.jpg" alt="Imagen 2">
+        <img src="imagenesImportantes/cedula 2.jpg.png" alt="Imagen 3">
+        <img src="imagenesImportantes/cedula 3.jpg" alt="Imagen 4">
+        <img src="imagenesImportantes/cedula 4 (1).jpg" alt="Imagen 5">
+        <img src="imagenesImportantes/cedula 5 (1).jpg" alt="Imagen 6">
+        <img src="imagenesImportantes/cedula 6.jpg" alt="Imagen 7">
+        <img src="imagenesImportantes/cedula 7.jpg" alt="Imagen 8"> 
+        <img src="imagenesImportantes/cedula 8.jpg" alt="Imagen 9">
+        <img src="imagenesImportantes/Informe Bimestral.png" alt="Imagen 10">
+        <img src="imagenesImportantes/bimestral 1 (1).jpg" alt="Imagen 11">
+        <img src="imagenesImportantes/bimestral 2b.jpg" alt="Imagen 12">
+        <img src="imagenesImportantes/bimestral 3 (1).jpg" alt="Imagen 13">
+        <img src="imagenesImportantes/bimestral 4.jpg" alt="Imagen 14">
+        <img src="imagenesImportantes/bimestral 5.jpg" alt="Imagen 15">
+        <img src="imagenesImportantes/bimestral 6.jpg" alt="Imagen 16">
+        <img src="imagenesImportantes/bimestral 7.jpg" alt="Imagen 17">
+        <img src="imagenesImportantes/final.jpg" alt="Imagen 18">
+
+
+      </div>
+      <h2>
+        <div id="prev-arrow">&lt;</div>
+      </h2>
+      <h2>
+        <div id="next-arrow">&gt;</div>
+      </h2>
+    </div>
+    <div id="text">Texto de ejemplo</div>
+    <div id="additional-text">Texto adicional personalizable</div>
+    <script>
+      const images = document.querySelectorAll('#image-container img');
+      const prevArrow = document.querySelector('#prev-arrow');
+      const nextArrow = document.querySelector('#next-arrow');
+      const text = document.querySelector('#text');
+      const additionalText = document.querySelector('#additional-text');
+      let currentIndex = 0;
+
+      function showImage(index) {
+        images.forEach((image, i) => {
+          if (i === index) {
+            image.style.display = 'block';
+          } else {
+            image.style.display = 'none';
+          }
+        });
+        text.textContent = ` ${index + 1}`;
+        additionalText.textContent = getAdditionalText(index);
+      }
+      function getAdditionalText(index) {
+     /*textos para cada paso//añadir al final*/
+      const additionalTexts = [
+        
+        "Para iniciar, deberás darte de alta en el IMSS, Dirígete a la parte de abajo que dice ´Hoja del seguro´, allí vienen todas las instrucciones.",
+        "El siguiente paso es obtener la cédula de prácticas profesionales, deberás dirigirte al ´Menú de archivos´ el cual está en la parte superior",
+        "Seguido de esto haz clic donde indica la imagen, al hacer clic se iniciara la descarga automáticamente",
+        "El siguiente paso es llenar la cédula, te diré como llenar las partes donde usualmente se confunden los alumnos!",
+        "En donde dice ´Carrera de PTB´ debes de escribir tu especialidad",
+        "En la parte de ´Rama o giro´ deberás preguntárselo a la empresa para poderlo llenar, ´C.P´ es el código postal por lo que también deberás de preguntar cuál es el de la empresa, el ´Tipo´ también deberás de preguntarlo y marcalo con una ´X´, el estímulo económico es el monto de dinero que recibes como pago, además de añadir si los pagos son semanales, quincenales, mensuales o si te pagarán hasta concluir tus prácticas, esto también deberás marcarlo con una ´X´",
+        "Toda la información que pide el apartado de ´Registro de asesor o jefe inmediato´ se la deberás de preguntar a tu jefe o asesor",
+        "En el apartado ´Desarrollo de practicas´ deberás de poner el horario de 4 horas diarias que realizaras(como el ejemplo), en ´Actividades a realizar´ debes de poner lo que harás en la empresa, pero OJO debe ser acorde a tu especialidad, recuerda poner la fecha y tu firma",
+        "Después de haber rellenado todo acorde a la información solicitada deberás de imprimirlo y entregárselo a la Lic.Veronica Colmenero en el área de vinculación",
+        "Después de haber pasado 2 meses en tus prácticas profesionales deberás hacer un reporte bimestral, lo puedes descargar de la misma forma en que descargaste la cédula de prácticas profesionales, a continuación te diré como se llena el informe.",
+        "Para empezar deberás de poner si tus prácticas las haces externamente(fuera de Conalep) o internamente(dentro de Conalep) con una ´x´",
+        "Usualmente se confunden los alumnos en el ´Turno´, deberás poner si eres del turno matutino(mañana) o vespertino(tarde)",
+        "Te recuerdo que en carrera PTB debes de poner tu especialidad",
+        "Como dice la imagen deberás de poner la fecha del inicio del bimestre(cuando iniciaste prácticas) y la fecha de cuando cumplas 2 meses (cada bimestre dura 2 meses)",
+        "Ahora deberás de poner las horas completadas que tengas hasta el momento",
+        "Después de llenar la información que se pide deberás de poner la fecha",
+        "Que no se te olviden los sellos y las firmas!!",
+        "El informe final es casi igual al informe bimestral, lo único que cambian son las fechas de inicio de bimestre, termino del mismo y el total de horas!",
+
+      ];
+
+      return additionalTexts[index] || "Descripcion cencilla de los pasos";
+    }
+
+      function changeImage(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) {
+          currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+          currentIndex = 0;
+        }
+        showImage(currentIndex);
+      }
+
+      prevArrow.addEventListener('click', () => {
+        changeImage(-1);
+      });
+
+      nextArrow.addEventListener('click', () => {
+        changeImage(1);
+      });
+
+      showImage(currentIndex);
+        
+    </script>
+    
+
+
+
+    
+
+
+    <div class="section">
+      <div class="parrafo">
+        <div class="RQ" style=" will-change: transform;
+          background: rgb(255, 255, 255);
+          border-radius: 14px;
+          display:block;                                                    /*hace que se acomode de esa manera el texto*/
+          box-shadow: 0 25px 50px -12px hsla(0, 0%, 0%, 0.35);
+          transform-origin: center top;">
+        <h1 style="font-family: Arial, sans-serif; ">Recuerda Que:</h1>
+          <p >
+            Toda esta papelería de sebe de entregar en el área de Vinculación con la Licenciada Verónica Colmenero. <br> 
+            El horario de atención es de 8 AM a 4 PM.<br>
+            Las prácticas profesionales duran un total de 360 horas (4 meses).<br>
+            Te aconsejamos llevar un conteo de las horas que llevas en tus prácticas.<br>
+            ¡Saca una copia de cada papel que entregues! Es por si pierdes alguno!<br>   
+          </p>
+        </div>
+       
+
+      <div class="oja" style=" will-change: transform;
+        background: white;
+        border-radius: 14px;
+        display:block;
+        box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+        transform-origin: center top;">
+      <h1 style="font-family: Arial, sans-serif;">Hoja del seguro</h1>
+        <p>
+          La hoja del seguro se tramita de dos formas, la primera es de manera precencial acudiendo al ims y la segunda es de manera online<br>
+          <br>
+
+          -Si el alumno tiene ISSSTE o seguro social por papá o mamá. Deberá entregar a escolares una copia de la tarjeta de citas vigente.(precentar una constancia de estudios en el archivo de la clinica para actualizar tu vigencia cada semestre).<br>
+          <br>
+          -SI NO TIENE SU HIJ(@) NINGUN SERVICIO MEDICO. DEBERÁ GENERAR UN NÚMERO DE AFILIACIÓN DEL IMMS COMO ESTUDIANTE EN LA PAGINA <a style="background-color: #ab0033;" href="https://www.imss.gob.mx/" target="_blank"  >www.imss.gob.mx (dale click)</a><br> 
+          Dar click en acceso directo (NSS) numero de seguridad social y seguir los 3 pasos a llenar para obtener tu nss, deberás tener a la mano la curp y un correo electronico para tu asignación de número de seguro social.<br>
+          necesitas imprimir la hoja que aparece en las opciones "imprimir y guardar", deberás llevar la hoja del IMMS a servicios escolares para que te den de alta y llevar el correcto archivado.<br>
+          -Dudas con la Licenciada Victoria Ochoa.<br>
+          <br>
+          El horario de atención de SERVICIOS ESCOLARES es de 7am a 3pm.<br>
+        </p>
+      </div>
+      <div class="cedula" style=" will-change: transform;
+      background: white;
+      border-radius: 14px;
+      display:block;
+      box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+      transform-origin: center top;">
+    <h1 style="font-family: Arial, sans-serif;">Cédula De Inscripción a Prácticas Profesionales</h1>
+      <p>
+        Primero que nada deberás dirigirte al apartado "Menú de archivos", descargar el archivo Word correspondiente y empezar a llenarlo con la información requerida, apoyate en las instrucciones de la parte superior.
+      </p>
+    </div>
+  </div>
+      <div class="carta" style=" will-change: transform;
+        background: white;
+        border-radius: 14px;
+        display:block;
+        box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+        transform-origin: center top;">
+       <h1 style="font-family: Arial, sans-serif;">Carta De Precentación</h1>
+        <p>
+          Para que puedas tener tu carta de presentación deberás de dirigirte al área de Vinculación con la Licenciada Veronica Colmenero <br> y pedirle la carta de presentación.
+          Este proceso no es inmediato por lo que tendrás que ir otro día a recogerla.
+        </p>
+      </div>    
+      <div class="aceptacion" style=" will-change: transform;
+        background: white;
+        border-radius: 14px;
+        display:block;
+        box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+        transform-origin: center top;">
+        </p>
+      <h1 style="font-family: Arial, sans-serif;">Carta de aceptación</h1>
+        <p>
+          Esta carta es entregada por la asociación o empresa con la que vayas a realizar tus prácticas profesionales, por lo que deberás exigirla.
+        </p>
+      </div>
+      <div class="infotri" style=" will-change: transform;
+        background: white;
+        border-radius: 14px;
+        display:block;
+        box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+        transform-origin: center top;">
+       <h1 style="font-family: Arial, sans-serif;">Informe Bimestral</h1>
+        <p>
+          Para realizar tu informe bimestral deberás dirigirte a la sección "menú de archivos" de esta página y descargarlo haciendo clic en el Menú de archivos y después en Informe bimestral.
+          Posteriormente deberás empezar a llenarlo con las instrucciones de la parte superior de la página, al haber terminado deberás de imprimirlo y entregarlo en el área 
+          de Vinculación con la Licenciada Veronica Colmenero.   
+        </p>
+      </div>
+      <div class="infofi" style=" will-change: transform;
+        background: white;
+        border-radius: 14px;
+        display:block;
+        box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+        transform-origin: center top;">
+      <h1 style="font-family: Arial, sans-serif;">Informe Final</h1>
+          <p>
+            El informe Final se descarga en la sección "Menú de archivos" de esta página, al descargarlo deberás proceder a responderlo con las instrucciones de la parte superior
+            de esta página, cuando finalmente lo hayas llenado de la manera correcta podrás imprimirlo y entregarlo en el área de Vinculación con la Licenciada Veronica Colmenero.
+         </p>
+      </div>
+      <div class="termino" style=" will-change: transform;
+        background: white;
+        border-radius: 14px;
+        display:block;
+        box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+        transform-origin: center top;">
+      <h1 style="font-family: Arial, sans-serif;">Carta de Término</h1>
+        <p>
+          Esta carta te la entrega la empresa o asociación donde hayas realizado tus prácticas profesionales, al concluir tus 360 horas, podrás pedirla y posteriormente entregarla
+          con la Licenciada Veronica Colmenero.<br>
+          ¡Y con esto habrás concluido tus prácticas profesionales!!!!  
+        </p>
+      </div>
+    </div>
+   
+    
+    
+
+
+    <style>
+   
+      .letras-abajo {
+          margin-top: -5px;
+          margin-left: 10px;
+          word-wrap: break-word;
+       
+      }
+  
+    
+      @media (max-width: 768px) {
+          .letras-abajo {
+              margin-top: 0;
+              margin-left: 0;
+              text-align: center;
+          }
+      }
+  </style>
+  </nav>
+    <section id="liston-superior" class="d-none d-sm-none d-md-none d-lg-block"></section>
+    <section id="iconos">
+        <div class="contenido-iconos">
+          <nav class="letras-abajo" style="margin-top: -45px; margin-left: -107px; z-index: 1;">
+            <p >Encargada De Practicas: Lic.Veronica Colmenero. <br>
+              Programador:Alumno Francisco Rodriguez Hernandez<br> INFO-505.
+            </p>
+          </nav>
+            
+            <style>
+             
+              .letras-abajo {
+                  margin-top: -5px;
+                  margin-left: 10px;
+                  word-wrap: break-word;
+              }
+          
+            
+              @media (max-width: 768px) {
+                  .letras-abajo {
+                      margin-top: 0;
+                      margin-left: 0;
+                      text-align: center;
+                  }
+              }
+          </style>
+          </nav>
+          <aside id="contenido-derecho">
+              <section id="iconos">
+                  <div class="contenido-iconos">
+                      <nav class="letras-abajo" style="margin-top: -95px; margin-left: -87px;"   >
+                        <p style="text-align: left;" >Direccion: Av. De la industria S/N 
+                          Fracc. Parque Industrial Del Norte, C.P,<br> 87316 
+                          H. Matamoros, Tamaulipas, Mexico. <br>
+                          Tel:(868) 810 0113, (868) 810 0732 <br><p>
+                      </nav>
+                  </div>
+              </section>
+                  </div>
+                </div>
+              </section>
+          </aside>
+    </section>
+   
+    <div class="container">
+      <div class="row">
+            <ul class="clean-list redes-sociales" style="background-color: #ab0033; padding: 6px 137px 0px 50px; 
+              display: flex;
+              flex-direction: row;
+              justify-content:center;
+              align-items: center;
+              margin-top: 0;" >
+             <p style="color: white; margin-top: 1px; "> Nuestras Redes Sociales!</p>
+              <li class="li-fb"><a href="https://www.facebook.com/ConalepMatamoros055" target="_blank" rel="noopener"><i class="fa fa-facebook"></i><img src="imagenes/c.png"></a></li>
+              <li class="li-inst"><a href="https://www.instagram.com/conalepmatamoros/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i><img src="imagenes/a.png"></a></li>
+              <li class="li-yt"><a href="https://goo.gl/maps/tvpEzKA8BJN7e1JN9" target="_blank" rel="noopener"><i class="fa fa-youtube"></i><img src="imagenes/b.png"></a></li>
+            </ul>
+  </div>
+  
+</div>
+  
+</body>
+</html>
+
+  </body>
+  </html>
